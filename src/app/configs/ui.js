@@ -79,7 +79,7 @@ const daysInMonth = [
   },
 ];
 
-const IMG_VERSION = "?v=20261019_01";
+const IMG_VERSION = "?v=20261019_03";
 const weddingImg = (file) => `/wedding/${file}${IMG_VERSION}`;
 
 // invitation intro (first section)
