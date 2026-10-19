@@ -79,9 +79,12 @@ const daysInMonth = [
   },
 ];
 
+const IMG_VERSION = "?v=20261019_01";
+const weddingImg = (file) => `/wedding/${file}${IMG_VERSION}`;
+
 // invitation intro (first section)
 const introSection = {
-  mainImage: "/wedding/DSC01645.JPEG",
+  mainImage: weddingImg("DSC01645.JPEG"),
   groomFirstLetter: "L",
   brideFirstLetter: "T",
 };
@@ -96,16 +99,16 @@ const profileSection = {
       name: "Nguyễn Hải Long",
       father: "Nguyễn Viết Đông",
       mother: "Nguyễn Thị Miền",
-      avatar: "/wedding/DSC01825.JPEG",
-      images: ["/wedding/DSC01803.JPEG", "/wedding/DSC01840.JPEG"],
+      avatar: weddingImg("DSC01825.JPEG"),
+      images: [weddingImg("DSC01803.JPEG"), weddingImg("DSC01840.JPEG")],
     },
     {
       title: "bride",
       name: "Bùi Minh Tâm",
       father: "Bùi Quang Huy",
       mother: "Trần Thị Thanh Mỵ",
-      avatar: "/wedding/DSC01645.JPEG",
-      images: ["/wedding/DSC01588.JPEG", "/wedding/DSC01671.JPEG"],
+      avatar: weddingImg("DSC01645.JPEG"),
+      images: [weddingImg("DSC01588.JPEG"), weddingImg("DSC01671.JPEG")],
     },
   ],
 };
@@ -113,9 +116,9 @@ const profileSection = {
 // invitation section
 const invitationSection = {
   imgs: [
-    "/wedding/DSC01404.JPEG",
-    "/wedding/DSC01356.JPEG",
-    "/wedding/DSC01426.JPEG",
+    weddingImg("DSC01404.JPEG"),
+    weddingImg("DSC01356.JPEG"),
+    weddingImg("DSC01426.JPEG"),
   ],
   activeDay: 29,
 };
@@ -123,24 +126,24 @@ const invitationSection = {
 // album section
 const albumSection = {
   images: [
-    "/wedding/DSC01356.JPEG",
-    "/wedding/DSC01445.JPEG",
-    "/wedding/DSC01782.JPEG",
-    "/wedding/DSC01909.JPEG",
-    "/wedding/DSC02004.JPEG",
-    "/wedding/DSC02024.JPEG",
+    weddingImg("DSC01356.JPEG"),
+    weddingImg("DSC01445.JPEG"),
+    weddingImg("DSC01782.JPEG"),
+    weddingImg("DSC01909.JPEG"),
+    weddingImg("DSC02004.JPEG"),
+    weddingImg("DSC02024.JPEG"),
   ],
 };
 
 // guestbook section
 const guestbookSection = {
-  image: "/wedding/DSC02068.JPEG",
+  image: weddingImg("DSC02068.JPEG"),
   time: "2026-12-31T23:59:59",
 };
 
 // gift section
 const giftSection = {
-  image: "/wedding/DSC01913.JPEG",
+  image: weddingImg("DSC01913.JPEG"),
   brideBank: {
     name: "BÙI MINH TÂM",
     bankName: "TPBank",
@@ -167,89 +170,89 @@ const timerSection = {
 // final section
 const finalSection = {
   images: [
-    "/wedding/DSC02108.JPEG",
-    "/wedding/DSC02153.JPEG",
-    "/wedding/DSC02167.JPEG",
-    "/wedding/DSC02171.JPEG",
+    weddingImg("DSC02108.JPEG"),
+    weddingImg("DSC02153.JPEG"),
+    weddingImg("DSC02167.JPEG"),
+    weddingImg("DSC02171.JPEG"),
   ],
 };
 
 // Album Page
 const albumPage = {
-  topImage: "/wedding/DSC01782.JPEG",
-  bottomImage: "/wedding/DSC02218.JPEG",
-  mainImage: "/wedding/DSC01445.JPEG",
+  topImage: weddingImg("DSC01782.JPEG"),
+  bottomImage: weddingImg("DSC02218.JPEG"),
+  mainImage: weddingImg("DSC01445.JPEG"),
 };
 
 const albumA = [
   {
     imgs: [
-      { id: 1, img: "/wedding/DSC01356.JPEG" },
-      { id: 2, img: "/wedding/DSC01404.JPEG" },
+      { id: 1, img: weddingImg("DSC01356.JPEG") },
+      { id: 2, img: weddingImg("DSC01404.JPEG") },
     ],
   },
   {
     imgs: [
-      { id: 3, img: "/wedding/DSC01426.JPEG" },
-      { id: 4, img: "/wedding/DSC01445.JPEG" },
+      { id: 3, img: weddingImg("DSC01426.JPEG") },
+      { id: 4, img: weddingImg("DSC01445.JPEG") },
     ],
   },
   {
     imgs: [
-      { id: 5, img: "/wedding/DSC01588.JPEG" },
-      { id: 6, img: "/wedding/DSC01645.JPEG" },
+      { id: 5, img: weddingImg("DSC01588.JPEG") },
+      { id: 6, img: weddingImg("DSC01645.JPEG") },
     ],
   },
   {
     imgs: [
-      { id: 7, img: "/wedding/DSC01671.JPEG" },
-      { id: 8, img: "/wedding/DSC01782.JPEG" },
+      { id: 7, img: weddingImg("DSC01671.JPEG") },
+      { id: 8, img: weddingImg("DSC01782.JPEG") },
     ],
   },
 ];
 
 const albumB = [
   {
-    imgs: [{ id: 9, img: "/wedding/DSC01803.JPEG" }],
+    imgs: [{ id: 9, img: weddingImg("DSC01803.JPEG") }],
   },
   {
-    imgs: [{ id: 10, img: "/wedding/DSC01825.JPEG" }],
+    imgs: [{ id: 10, img: weddingImg("DSC01825.JPEG") }],
   },
   {
-    imgs: [{ id: 11, img: "/wedding/DSC01840.JPEG" }],
+    imgs: [{ id: 11, img: weddingImg("DSC01840.JPEG") }],
   },
   {
-    imgs: [{ id: 12, img: "/wedding/DSC01909.JPEG" }],
+    imgs: [{ id: 12, img: weddingImg("DSC01909.JPEG") }],
   },
 ];
 
 const albumC = [
   {
-    imgs: [{ id: 13, img: "/wedding/DSC01913.JPEG" }],
+    imgs: [{ id: 13, img: weddingImg("DSC01913.JPEG") }],
   },
   {
-    imgs: [{ id: 14, img: "/wedding/DSC02004.JPEG" }],
+    imgs: [{ id: 14, img: weddingImg("DSC02004.JPEG") }],
   },
   {
-    imgs: [{ id: 15, img: "/wedding/DSC02024.JPEG" }],
+    imgs: [{ id: 15, img: weddingImg("DSC02024.JPEG") }],
   },
   {
-    imgs: [{ id: 16, img: "/wedding/DSC02068.JPEG" }],
+    imgs: [{ id: 16, img: weddingImg("DSC02068.JPEG") }],
   },
   {
-    imgs: [{ id: 17, img: "/wedding/DSC02108.JPEG" }],
+    imgs: [{ id: 17, img: weddingImg("DSC02108.JPEG") }],
   },
   {
-    imgs: [{ id: 18, img: "/wedding/DSC02153.JPEG" }],
+    imgs: [{ id: 18, img: weddingImg("DSC02153.JPEG") }],
   },
   {
-    imgs: [{ id: 19, img: "/wedding/DSC02167.JPEG" }],
+    imgs: [{ id: 19, img: weddingImg("DSC02167.JPEG") }],
   },
   {
-    imgs: [{ id: 20, img: "/wedding/DSC02171.JPEG" }],
+    imgs: [{ id: 20, img: weddingImg("DSC02171.JPEG") }],
   },
   {
-    imgs: [{ id: 21, img: "/wedding/DSC02218.JPEG" }],
+    imgs: [{ id: 21, img: weddingImg("DSC02218.JPEG") }],
   },
 ];
 
@@ -258,19 +261,19 @@ const albums = [...albumA, ...albumB, ...albumC]; // for preview
 const metaData = {
   main: {
     title: "Thiệp Cưới Hải Long & Minh Tâm | Kính Mời",
-    graphImage: "/wedding/DSC01645.JPEG",
+    graphImage: weddingImg("DSC01645.JPEG"),
   },
   wish: {
     title: "Tất cả lời chúc dành cho Hải Long & Minh Tâm",
-    graphImage: "/wedding/DSC01840.JPEG",
+    graphImage: weddingImg("DSC01840.JPEG"),
   },
   invitation: {
     title: "Thiệp Cưới Hải Long & Minh Tâm",
-    graphImage: "/wedding/DSC01445.JPEG",
+    graphImage: weddingImg("DSC01445.JPEG"),
   },
   album: {
     title: "Album Cưới Hải Long & Minh Tâm",
-    graphImage: "/wedding/DSC01671.JPEG",
+    graphImage: weddingImg("DSC01671.JPEG"),
   },
 };
 

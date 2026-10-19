@@ -55,13 +55,9 @@ function Chacracter({ data = {} }) {
         <div
           className={cx("imgs")}
           style={{
-            transform: isInView
-              ? "none"
-              : data.title === "groom"
-              ? "translateX(-150px)"
-              : "translateX(150px)",
+            transform: isInView ? "none" : "scale(0.96)",
             opacity: isInView ? 1 : 0,
-            transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1)",
+            transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
           {data.images.map((img, index) => {

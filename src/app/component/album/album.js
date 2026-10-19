@@ -32,9 +32,7 @@ function Album({ name }) {
             src={albumSection.images[2]}
             className={cx("side-img")}
             style={{
-              transform: isInView
-                ? "translateX(0) scale(1)"
-                : "translateX(-40px) scale(0.95)",
+              transform: isInView ? "scale(1)" : "scale(0.96)",
               opacity: isInView ? 1 : 0,
               transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1)",
             }}
@@ -51,9 +49,7 @@ function Album({ name }) {
               className={cx("main-img")}
               src={albumSection.images[5]}
               style={{
-                transform: isInView
-                  ? "translate(0, 0) scale(1)"
-                  : "translate(40px, -20px) scale(0.95)",
+                transform: isInView ? "scale(1)" : "scale(0.96)",
                 opacity: isInView ? 1 : 0,
                 transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1)",
               }}

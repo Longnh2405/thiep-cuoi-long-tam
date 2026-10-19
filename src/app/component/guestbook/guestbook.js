@@ -132,8 +132,8 @@ function GuestBook({ fName, isGai = false }) {
             style={{
               backgroundImage: `url(${guestbookSection.image})`,
               transform: isInViewBox
-                ? "translateX(0) scale(1)"
-                : "translateX(-40px) scale(0.95)",
+                ? "scale(1)"
+                : "scale(0.96)",
               opacity: isInViewBox ? 1 : 0,
               transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1)",
             }}

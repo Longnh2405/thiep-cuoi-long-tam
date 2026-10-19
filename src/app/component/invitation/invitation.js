@@ -22,9 +22,9 @@ function Invitation({ isGai = false }) {
         <div
           className={cx("img-wrap")}
           style={{
-            transform: isInView ? "translateX(0)" : "translateX(80px)",
+            transform: isInView ? "scale(1)" : "scale(0.95)",
             opacity: isInView ? 1 : 0,
-            transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+            transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           }}
         >
           <img className={cx("img")} src={imgs[1]} alt="wedding" />
@@ -35,9 +35,9 @@ function Invitation({ isGai = false }) {
         <div
           className={cx("img-wrap")}
           style={{
-            transform: isInView ? "translateX(0)" : "translateX(-80px)",
+            transform: isInView ? "scale(1)" : "scale(0.95)",
             opacity: isInView ? 1 : 0,
-            transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s  ",
+            transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           }}
         >
           <img className={cx("img")} src={imgs[2]} alt="wedding" />
