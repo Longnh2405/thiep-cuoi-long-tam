@@ -132,10 +132,10 @@ function GuestBook({ fName, isGai = false }) {
             style={{
               backgroundImage: `url(${guestbookSection.image})`,
               transform: isInViewBox
-                ? "translateX(0) rotate(0deg)"
-                : " translateX(-200px) rotate(-180deg)",
+                ? "translateX(0) scale(1)"
+                : "translateX(-40px) scale(0.95)",
               opacity: isInViewBox ? 1 : 0,
-              transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)",
+              transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1)",
             }}
           />
           <div className={cx("frame")} />
