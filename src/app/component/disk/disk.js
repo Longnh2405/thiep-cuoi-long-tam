@@ -44,7 +44,13 @@ function Disk() {
       onClick={handleOpenAudio}
       title="Bật/Tắt nhạc"
     >
-      <audio src="/videoplayback.m4a" ref={ref} preload="auto" loop />
+      <audio
+        src="/videoplayback.m4a"
+        ref={ref}
+        preload="auto"
+        loop
+        playsInline
+      />
     </div>
   );
 }
