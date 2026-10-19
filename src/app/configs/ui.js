@@ -29,7 +29,7 @@ const weddingInfo = [
     },
     address: "Xóm 7, xã Giao Minh, Ninh Bình",
     street: "Xóm 7, xã Giao Minh, Ninh Bình",
-    phone: "0392 859 3401",
+    phone: "0393604125",
     posision: "bottom left",
   },
   {
@@ -42,7 +42,7 @@ const weddingInfo = [
     },
     address: "Nhà văn hóa tổ dân phố Phượng Đồng, phường Chương Mỹ, Hà Nội",
     street: "Nhà văn hóa tổ dân phố Phượng Đồng, phường Chương Mỹ, Hà Nội",
-    phone: "0392 859 3402",
+    phone: "0352105655",
     posision: "bottom left",
   },
 ];
