@@ -1,0 +1,8 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: radial-gradient(circle at 50% 0%, #fffdf9 0%, #fff6f2 100%);
+  min-height: 100vh;
+}
