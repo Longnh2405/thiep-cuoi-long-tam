@@ -13,17 +13,16 @@ function Game() {
         <h2 className={cx("title")}>GAME</h2>
         <p className={cx("des")}>
           Người chơi sẽ hóa thân làm chú rể vượt qua các vật cản (thuốc lá, rượu
-          chè, cờ bạc, bạo lực gia đình) để đến với cô dâu, truyền tải thông
-          điệp về cam kết và trách nhiệm trong xây dựng hạnh phúc gia đình. Hành
-          trình này giúp chú rể đến gần cô dâu mà còn hoàn thiện bản thân, chuẩn
-          bị tốt hơn cho cuộc sống hôn nhân.
+          chè, cờ bạc, bạo lực gia đình) để đến với cô dâu, truyền tải thông điệp 
+          về cam kết và trách nhiệm trong xây dựng hạnh phúc gia đình. Hành trình 
+          này không chỉ giúp chú rể đến gần cô dâu mà còn là quá trình hoàn thiện 
+          bản thân, chuẩn bị tốt hơn cho cuộc sống hôn nhân.
         </p>
         <form className={cx("difficulty")}>
           <label className={cx("label")} htmlFor="difficulty">
-            Độ khó :{" "}
+            Độ khó (Level) :{" "}
           </label>
           <select
-            selected="selected"
             className={cx("selector")}
             name="difficulty"
             id="difficulty"
@@ -31,13 +30,19 @@ function Game() {
             onChange={(e) => setDif(e.target.value)}
           >
             <option className={cx("dif-option")} value="10">
-              20
+              10 (Chậm)
+            </option>
+            <option className={cx("dif-option")} value="20">
+              20 (Vừa)
             </option>
             <option className={cx("dif-option")} value="50">
-              50
+              50 (Nhanh)
+            </option>
+            <option className={cx("dif-option")} value="80">
+              80 (Rất nhanh)
             </option>
             <option className={cx("dif-option")} value="100">
-              100
+              100 (Siêu tốc)
             </option>
           </select>
         </form>

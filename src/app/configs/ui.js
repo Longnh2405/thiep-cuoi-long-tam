@@ -29,7 +29,7 @@ const weddingInfo = [
     },
     address: "Xóm 7, xã Giao Minh, Ninh Bình",
     street: "Xóm 7, xã Giao Minh, Ninh Bình",
-    phone: "0393604125",
+    phone: "",
     posision: "bottom left",
   },
   {
@@ -42,7 +42,7 @@ const weddingInfo = [
     },
     address: "Nhà văn hóa tổ dân phố Phượng Đồng, phường Chương Mỹ, Hà Nội",
     street: "Nhà văn hóa tổ dân phố Phượng Đồng, phường Chương Mỹ, Hà Nội",
-    phone: "0352105655",
+    phone: "",
     posision: "bottom left",
   },
 ];
@@ -97,16 +97,16 @@ const profileSection = {
     {
       title: "groom",
       name: "Nguyễn Hải Long",
-      father: "Nguyễn Viết Đông",
-      mother: "Nguyễn Thị Miền",
+      // father: "Nguyễn Viết Đông",
+      // mother: "Nguyễn Thị Miền",
       avatar: weddingImg("DSC01825.JPEG"),
       images: [weddingImg("DSC01803.JPEG"), weddingImg("DSC01840.JPEG")],
     },
     {
       title: "bride",
       name: "Bùi Minh Tâm",
-      father: "Bùi Quang Huy",
-      mother: "Trần Thị Thanh Mỵ",
+      // father: "Bùi Quang Huy",
+      // mother: "Trần Thị Thanh Mỵ",
       avatar: weddingImg("DSC01645.JPEG"),
       images: [weddingImg("DSC01588.JPEG"), weddingImg("DSC01671.JPEG")],
     },
@@ -145,16 +145,16 @@ const guestbookSection = {
 const giftSection = {
   image: weddingImg("DSC01913.JPEG"),
   brideBank: {
-    name: "BÙI MINH TÂM",
-    bankName: "TPBank",
-    qr: "https://img.vietqr.io/image/TPB-00003631580-compact2.png?accountName=BUI%20MINH%20TAM",
-    bankNumber: "00003631580",
+    name: "",
+    bankName: "",
+    qr: "",
+    bankNumber: "",
   },
   groomBank: {
-    name: "NGUYỄN HẢI LONG",
-    bankName: "TPBank",
-    qr: "https://img.vietqr.io/image/TPB-03928593401-compact2.png?accountName=NGUYEN%20HAI%20LONG",
-    bankNumber: "03928593401",
+    name: "",
+    bankName: "",
+    qr: "",
+    bankNumber: "",
   },
 };
 

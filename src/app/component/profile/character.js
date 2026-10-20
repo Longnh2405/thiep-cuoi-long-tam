@@ -9,10 +9,13 @@ function Chacracter({ data = {} }) {
   const ref = useRef(null);
 
   const isInView = useInView(ref, { once: false });
+  const hasFather = Boolean(data.father && String(data.father).trim());
+  const hasMother = Boolean(data.mother && String(data.mother).trim());
+
   return (
     <div className={cx("profile")} key={data.title} ref={ref}>
       <div className={cx("large-img-box")}>
-        <img className={cx("large-img")} src={data.avatar} />
+        <img className={cx("large-img")} src={data.avatar} alt={data.name || "profile"} />
       </div>
       <div className={cx("pro-des")}>
         <h3
@@ -23,19 +26,21 @@ function Chacracter({ data = {} }) {
             transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
-          {data.title === "groom" ? "Chú rể" : "Cô dâu"}
+          {data.title === "groom" ? "Groom" : "Bride"}
         </h3>
-        <p
-          className={cx("name")}
-          style={{
-            transform: isInView ? "none" : "translateY(60px)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
-          }}
-        >
-          {data.name}
-        </p>
-        {(data.father || data.mother) && (
+        {data.name && (
+          <p
+            className={cx("name")}
+            style={{
+              transform: isInView ? "none" : "translateY(60px)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
+            }}
+          >
+            {data.name}
+          </p>
+        )}
+        {(hasFather || hasMother) && (
           <div
             className={cx("parents-info")}
             style={{
@@ -48,26 +53,36 @@ function Chacracter({ data = {} }) {
               transition: "all 1.5s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s",
             }}
           >
-            {data.father && <p>Bố: <strong>{data.father}</strong></p>}
-            {data.mother && <p>Mẹ: <strong>{data.mother}</strong></p>}
+            {hasFather && (
+              <p>
+                Bố: <strong>{String(data.father).trim()}</strong>
+              </p>
+            )}
+            {hasMother && (
+              <p>
+                Mẹ: <strong>{String(data.mother).trim()}</strong>
+              </p>
+            )}
           </div>
         )}
-        <div
-          className={cx("imgs")}
-          style={{
-            transform: isInView ? "none" : "scale(0.96)",
-            opacity: isInView ? 1 : 0,
-            transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)",
-          }}
-        >
-          {data.images.map((img, index) => {
-            return (
-              <div className={cx("small-img-box")} key={index}>
-                <img className={cx("small-img")} key={index} src={img} />
-              </div>
-            );
-          })}
-        </div>
+        {data.images && data.images.length > 0 && (
+          <div
+            className={cx("imgs")}
+            style={{
+              transform: isInView ? "none" : "scale(0.96)",
+              opacity: isInView ? 1 : 0,
+              transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1)",
+            }}
+          >
+            {data.images.map((img, index) => {
+              return (
+                <div className={cx("small-img-box")} key={index}>
+                  <img className={cx("small-img")} key={index} src={img} alt="wedding" />
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );

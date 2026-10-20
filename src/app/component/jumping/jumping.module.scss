@@ -6,6 +6,8 @@ $br: var(--primary);
   max-width: 700px;
   width: 100%;
   height: 500px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .gaming-ui {
@@ -13,11 +15,18 @@ $br: var(--primary);
   height: 100%;
   background-image: url("./images/background.png");
   background-size: cover;
+  position: relative;
+  overflow: hidden;
 
   .score {
+    position: absolute;
+    top: 12px;
+    left: 16px;
     font-size: 2rem;
     font-family: var(--large-font);
     font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   }
 }
 
@@ -48,10 +57,14 @@ $br: var(--primary);
     margin-top: 24px;
     font-size: 1.6rem;
     font-family: GameFont;
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: all 0.2s ease;
   }
 
   .start-button:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.35);
     cursor: pointer;
   }
 
@@ -104,7 +117,7 @@ $br: var(--primary);
 }
 
 .jump {
-  animation: jump 0.3s linear;
+  animation: jump 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @keyframes jump {
@@ -112,24 +125,16 @@ $br: var(--primary);
     top: $top;
   }
 
-  30% {
-    top: calc($top - 25px);
-  }
-
-  45% {
-    top: calc($top - 60px);
+  25% {
+    top: calc($top - 45px);
   }
 
   50% {
-    top: calc($top - 90px);
+    top: calc($top - 110px);
   }
 
-  65% {
-    top: calc($top - 60px);
-  }
-
-  80% {
-    top: calc($top - 25px);
+  75% {
+    top: calc($top - 45px);
   }
 
   100% {
@@ -160,7 +165,7 @@ $br: var(--primary);
   top: calc($top - 55px);
   left: 700px;
   background-size: 70px 50px;
-  animation: block 1s infinite linear;
+  animation: block 1.35s infinite linear;
 }
 
 .alcohol {
@@ -201,10 +206,7 @@ $br: var(--primary);
 }
 
 @media only screen and (max-width: 480px) {
-  .game {
-  }
-
   .obs {
-    animation: block 1.5s infinite linear;
+    animation: block 1.6s infinite linear;
   }
 }

@@ -19,8 +19,12 @@ function Infomation({
 }) {
   const boxRef = useRef();
   const boxInView = useInView(boxRef, { once: true });
+  const hasPhone = Boolean(phone && String(phone).trim());
+  const hasStreet = Boolean(street && String(street).trim());
+  const hasAddress = Boolean(address && String(address).trim());
+
   return (
-    <div className={cx("wrapper")} ref={boxRef}>
+    <div className={cx("wrapper", className)} ref={boxRef}>
       <House className={cx("house")} />
       {title && <h3 className={cx("title")}>{title}</h3>}
 
@@ -57,19 +61,24 @@ function Infomation({
         </span>
       </p>
 
-      <div className={cx("address")}>{address}</div>
-      <a className={cx("btn", "ani-btn")} href={`tel:${phone}`}>
-        <FaPhone className={cx("icon")} />
-        {phone}
-      </a>
-      <a
-        className={cx("btn")}
-        href={`http://maps.google.com/?q=${street}`}
-        target="_blank"
-      >
-        <FaMapMarkerAlt className={cx("icon")} />
-        Đường đi
-      </a>
+      {hasAddress && <div className={cx("address")}>{address}</div>}
+      {hasPhone && (
+        <a className={cx("btn", "ani-btn")} href={`tel:${String(phone).trim()}`}>
+          <FaPhone className={cx("icon")} />
+          {String(phone).trim()}
+        </a>
+      )}
+      {hasStreet && (
+        <a
+          className={cx("btn")}
+          href={`http://maps.google.com/?q=${encodeURIComponent(String(street).trim())}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaMapMarkerAlt className={cx("icon")} />
+          Đường đi
+        </a>
+      )}
     </div>
   );
 }
