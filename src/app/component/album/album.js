@@ -29,7 +29,8 @@ function Album({ name }) {
       <div className={cx("header")}>
         <div className={cx("side-img-wrap")} ref={viewRef}>
           <img
-            src={albumSection.images[2]}
+            src={albumSection.shareTheLove ? albumSection.shareTheLove[0] : albumSection.images[2]}
+            alt="Share the Love"
             className={cx("side-img")}
             style={{
               transform: isInView ? "scale(1)" : "scale(0.96)",
@@ -47,7 +48,8 @@ function Album({ name }) {
           <div className={cx("main-img-wrap")}>
             <img
               className={cx("main-img")}
-              src={albumSection.images[5]}
+              src={albumSection.shareTheLove ? albumSection.shareTheLove[1] : albumSection.images[5]}
+              alt="Share the Love"
               style={{
                 transform: isInView ? "scale(1)" : "scale(0.96)",
                 opacity: isInView ? 1 : 0,
