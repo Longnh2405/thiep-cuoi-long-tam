@@ -27,10 +27,10 @@ function Invitation({ isGai = false }) {
             transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           }}
         >
-          <img className={cx("img")} src={imgs[1]} alt="wedding" />
+          <img className={cx("img")} src={imgs[1]} alt="wedding" loading="lazy" decoding="async" />
         </div>
         <div className={cx("img-wrap", "center-img")}>
-          <img className={cx("img")} src={imgs[0]} alt="wedding" />
+          <img className={cx("img")} src={imgs[0]} alt="wedding" loading="lazy" decoding="async" />
         </div>
         <div
           className={cx("img-wrap")}
@@ -40,7 +40,7 @@ function Invitation({ isGai = false }) {
             transition: "all 0.8s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           }}
         >
-          <img className={cx("img")} src={imgs[2]} alt="wedding" />
+          <img className={cx("img")} src={imgs[2]} alt="wedding" loading="lazy" decoding="async" />
         </div>
       </div>
       <Days title="Tháng 11" activeDay={invitationSection.activeDay} />

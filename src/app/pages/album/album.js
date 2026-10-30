@@ -37,7 +37,7 @@ function Album() {
           >
             Album chúng mình
           </h2>
-          <img className={cx("hbimg")} src={albumPage.topImage} />
+          <img className={cx("hbimg")} src={albumPage.topImage} alt="Album" fetchPriority="high" />
         </div>
         <div
           className={cx("front-img")}
@@ -47,7 +47,7 @@ function Album() {
             transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)",
           }}
         >
-          <img className={cx("hfimg")} src={albumPage.mainImage} />
+          <img className={cx("hfimg")} src={albumPage.mainImage} alt="Album" fetchPriority="high" />
         </div>
       </div>
       <div className={cx("container")}>
@@ -139,7 +139,7 @@ function Album() {
       <div className={cx("footer")}>
         <h2 className={cx("text")}>Thank you</h2>
         <div className={cx("img-wrap")}>
-          <img className={cx("img")} src={albumPage.bottomImage} />
+          <img className={cx("img")} src={albumPage.bottomImage} alt="Album" loading="lazy" decoding="async" />
         </div>
       </div>
     </div>

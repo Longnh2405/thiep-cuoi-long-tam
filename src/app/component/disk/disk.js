@@ -47,7 +47,7 @@ function Disk() {
       <audio
         src="/videoplayback.m4a"
         ref={ref}
-        preload="auto"
+        preload="none"
         loop
         playsInline
       />

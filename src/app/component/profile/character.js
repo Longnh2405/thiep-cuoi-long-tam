@@ -15,7 +15,7 @@ function Chacracter({ data = {} }) {
   return (
     <div className={cx("profile")} key={data.title} ref={ref}>
       <div className={cx("large-img-box")}>
-        <img className={cx("large-img")} src={data.avatar} alt={data.name || "profile"} />
+        <img className={cx("large-img")} src={data.avatar} alt={data.name || "profile"} loading="lazy" decoding="async" />
       </div>
       <div className={cx("pro-des")}>
         <h3
@@ -77,7 +77,7 @@ function Chacracter({ data = {} }) {
             {data.images.map((img, index) => {
               return (
                 <div className={cx("small-img-box")} key={index}>
-                  <img className={cx("small-img")} key={index} src={img} alt="wedding" />
+                  <img className={cx("small-img")} key={index} src={img} alt="wedding" loading="lazy" decoding="async" />
                 </div>
               );
             })}

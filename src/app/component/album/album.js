@@ -31,6 +31,8 @@ function Album({ name }) {
           <img
             src={albumSection.shareTheLove ? albumSection.shareTheLove[0] : albumSection.images[2]}
             alt="Share the Love"
+            loading="lazy"
+            decoding="async"
             className={cx("side-img")}
             style={{
               transform: isInView ? "scale(1)" : "scale(0.96)",
@@ -50,6 +52,8 @@ function Album({ name }) {
               className={cx("main-img")}
               src={albumSection.shareTheLove ? albumSection.shareTheLove[1] : albumSection.images[5]}
               alt="Share the Love"
+              loading="lazy"
+              decoding="async"
               style={{
                 transform: isInView ? "scale(1)" : "scale(0.96)",
                 opacity: isInView ? 1 : 0,
@@ -75,7 +79,7 @@ function Album({ name }) {
           {albumSection.images.map((src) => {
             return (
               <div className={cx("monitor")} key={src}>
-                <img className={cx("monitor-img")} src={src} />
+                <img className={cx("monitor-img")} src={src} alt="wedding" loading="lazy" decoding="async" />
               </div>
             );
           })}
@@ -120,7 +124,7 @@ function Album({ name }) {
           {albumSection.images.map((src) => {
             return (
               <div className={cx("selector")} key={src}>
-                <img className={cx("selector-img")} src={src} />
+                <img className={cx("selector-img")} src={src} alt="wedding" loading="lazy" decoding="async" />
               </div>
             );
           })}

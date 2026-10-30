@@ -15,7 +15,7 @@ function Final() {
           {finalSection.images.map((src) => {
             return (
               <div className={cx("img-wrap")} key={src}>
-                <img className={cx("img")} src={src} />
+                <img className={cx("img")} src={src} alt="wedding" loading="lazy" decoding="async" />
               </div>
             );
           })}

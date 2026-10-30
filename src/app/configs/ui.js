@@ -79,7 +79,7 @@ const daysInMonth = [
   },
 ];
 
-const IMG_VERSION = "?v=20261030_01";
+const IMG_VERSION = "?v=20261030_02";
 const weddingImg = (file) =>
   `/wedding/${file.replace(/\.jpeg$/i, ".jpg")}${IMG_VERSION}`;
 

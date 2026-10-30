@@ -54,6 +54,8 @@ function Intro({ handleOpen, name = "Bạn", isGai = false, onToggleSide }) {
                 className={cx("img")}
                 src={introSection.mainImage}
                 alt="wedding-cover"
+                fetchPriority="high"
+                decoding="async"
               />
             </div>
           </div>
