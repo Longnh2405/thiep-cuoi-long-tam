@@ -85,7 +85,7 @@ const weddingImg = (file) =>
 
 // invitation intro (first section)
 const introSection = {
-  mainImage: weddingImg("DSC01645.jpg"),
+  mainImage: weddingImg("DSC01588.jpg"),
   groomFirstLetter: "L",
   brideFirstLetter: "T",
 };
