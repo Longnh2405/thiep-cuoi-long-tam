@@ -130,42 +130,43 @@
 @media (max-width: 600px) {
   .imgs {
     flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 8px 32px 8px;
+
     .img-wrap {
-      min-width: 200px;
-      min-height: 200px;
-      position: relative;
+      width: calc(50% - 16px);
+      max-width: 160px;
+      min-width: 0;
+      min-height: 0;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      margin: 8px;
     }
   }
 
   .imgs::before {
-    content: "<< Và thế giới đã mất";
-    font-size: 0.8rem;
-    letter-spacing: 8px;
-    bottom: 49%;
-    left: 0;
+    display: none;
   }
 
   .imgs::after {
-    content: "đi 1 người cô đơn >>";
-    color: #fff;
-    font-family: monospace;
+    content: "<< Và thế giới đã bớt đi một người cô đơn >>";
+    color: #f7dfa5;
+    font-family: inherit;
     position: absolute;
     bottom: 8px;
+    left: 0;
     right: 0;
-    font-size: 0.8rem;
-    letter-spacing: 8px;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .imgs {
-    flex-wrap: wrap;
     .img-wrap {
-      max-width: 150px;
-      max-height: 150px;
-      min-width: 150px;
-      min-height: 150px;
+      max-width: 140px;
+      margin: 6px;
     }
   }
 }

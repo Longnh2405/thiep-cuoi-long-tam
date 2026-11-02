@@ -150,16 +150,16 @@ const guestbookSection = {
 const giftSection = {
   image: weddingImg("DSC01913.jpg"),
   brideBank: {
-    name: "",
-    bankName: "",
-    qr: "",
-    bankNumber: "",
+    name: "BÙI MINH TÂM",
+    bankName: "TPBank",
+    qr: "https://img.vietqr.io/image/TPB-00003631580-compact2.png?accountName=BUI%20MINH%20TAM",
+    bankNumber: "00003631580",
   },
   groomBank: {
-    name: "",
-    bankName: "",
-    qr: "",
-    bankNumber: "",
+    name: "NGUYỄN HẢI LONG",
+    bankName: "TPBank",
+    qr: "https://img.vietqr.io/image/TPB-03928593401-compact2.png?accountName=NGUYEN%20HAI%20LONG",
+    bankNumber: "03928593401",
   },
 };
 

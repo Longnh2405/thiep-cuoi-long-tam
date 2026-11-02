@@ -44,19 +44,21 @@ function Invitation({ isGai = false }) {
         </div>
       </div>
       <Days title="Tháng 11" activeDay={invitationSection.activeDay} />
-      {list.map((wedInfo, index) => (
-        <Infomation
-          key={index}
-          img={wedInfo.img}
-          title={wedInfo.title}
-          date={wedInfo.date}
-          time={wedInfo.time}
-          address={wedInfo.address}
-          street={wedInfo.street}
-          phone={wedInfo.phone}
-          posision={wedInfo.posision}
-        />
-      ))}
+      <div className={cx("cards-container")}>
+        {list.map((wedInfo, index) => (
+          <Infomation
+            key={index}
+            img={wedInfo.img}
+            title={wedInfo.title}
+            date={wedInfo.date}
+            time={wedInfo.time}
+            address={wedInfo.address}
+            street={wedInfo.street}
+            phone={wedInfo.phone}
+            posision={wedInfo.posision}
+          />
+        ))}
+      </div>
     </div>
   );
 }

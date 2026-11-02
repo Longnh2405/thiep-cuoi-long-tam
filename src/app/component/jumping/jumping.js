@@ -37,7 +37,11 @@ function Jumping({ className, dif = 20 }) {
   const [isWin, setIsWin] = useState(false);
 
   const jump = (e) => {
-    if (e && (e.code === "Space" || e.key === " " || e.key === "ArrowUp")) {
+    const targetTag = e?.target?.tagName?.toLowerCase();
+    if (targetTag === "input" || targetTag === "textarea" || e?.target?.isContentEditable) {
+      return;
+    }
+    if (isStart && e && (e.code === "Space" || e.key === " " || e.key === "ArrowUp")) {
       e.preventDefault();
     }
     if (!!groomRef.current && groomRef.current.classList.length === 1) {
@@ -108,11 +112,15 @@ function Jumping({ className, dif = 20 }) {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
+      const targetTag = e?.target?.tagName?.toLowerCase();
+      if (targetTag === "input" || targetTag === "textarea" || e?.target?.isContentEditable) {
+        return;
+      }
       if (e.code === "Space" || e.key === " " || e.key === "ArrowUp") {
         if (isStart) {
           e.preventDefault();
+          jump(e);
         }
-        jump(e);
       }
     };
     document.addEventListener("keydown", handleKeyDown);
