@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { introSection, weddingInfo } from "@/app/configs/ui";
 const cx = classNames.bind(styles);
 
-function Intro({ handleOpen, name = "Bạn", isGai = false, onToggleSide }) {
+function Intro({ handleOpen, name = "Bạn", isGai = false }) {
   const ref = useRef(null);
   const currentWedInfo = isGai ? weddingInfo[1] : weddingInfo[0];
   const topLetter = isGai
@@ -18,32 +18,6 @@ function Intro({ handleOpen, name = "Bạn", isGai = false, onToggleSide }) {
 
   return (
     <div className={cx("wrapper")} ref={ref}>
-      {onToggleSide && (
-        <div className={cx("side-toggle-container")}>
-          <button
-            type="button"
-            className={cx("side-btn", !isGai && "active-side")}
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onToggleSide(false);
-            }}
-          >
-            Thiệp Nhà Trai
-          </button>
-          <button
-            type="button"
-            className={cx("side-btn", isGai && "active-side")}
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              onToggleSide(true);
-            }}
-          >
-            Thiệp Nhà Gái
-          </button>
-        </div>
-      )}
       <div className={cx("block-wrapper")}>
         <div className={cx("block")}>
           <div className={cx("left")}>

@@ -21,37 +21,17 @@ const cx = classNames.bind(styles);
 export default function Home() {
   const searchParams = useSearchParams();
   const name = searchParams.get("name") || "You";
-  const initialSide = (
-    searchParams.get("type") ||
-    searchParams.get("side") ||
-    "trai"
-  ).toLowerCase();
-  const [isGai, setIsGai] = useState(
-    initialSide === "gai" || initialSide === "bride" || initialSide === "nhagai"
-  );
+  const isGai = false;
 
   const [isOpen, setIsOpen] = useState(searchParams.get("open") === "1");
 
   const { dispatch } = useContext(MultiContext);
 
   useEffect(() => {
-    const side = (
-      searchParams.get("type") ||
-      searchParams.get("side") ||
-      ""
-    ).toLowerCase();
-    if (side === "gai" || side === "bride" || side === "nhagai") {
-      setIsGai(true);
-    } else if (side === "trai" || side === "groom" || side === "nhatrai") {
-      setIsGai(false);
-    }
-  }, [searchParams]);
-
-  useEffect(() => {
     if (searchParams.get("fbclid")) {
       window.location.href = window.location.origin + "/" + "?name=" + name;
     }
-  }, [searchParams]);
+  }, [searchParams, name]);
 
   const handleOpenInvitation = () => {
     setIsOpen(true);
@@ -80,6 +60,7 @@ export default function Home() {
       }, 100);
     }
   }, [isOpen]);
+
   return (
     <div className={cx("wrapper")}>
       <Disk />
@@ -87,7 +68,6 @@ export default function Home() {
         handleOpen={handleOpenInvitation}
         name={name}
         isGai={isGai}
-        onToggleSide={setIsGai}
       />
       {isOpen && (
         <>

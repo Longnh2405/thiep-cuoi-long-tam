@@ -265,7 +265,7 @@ const albums = [...albumA, ...albumB, ...albumC]; // for preview
 
 const metaData = {
   main: {
-    title: "Thiệp Cưới Hải Long & Minh Tâm | Kính Mời",
+    title: "Thiệp Cưới Hải Long & Minh Tâm | Lễ Thành Hôn",
     graphImage: weddingImg("DSC01645.jpg"),
   },
   wish: {
