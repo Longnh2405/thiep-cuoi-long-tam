@@ -13,7 +13,7 @@ const cx = classNames.bind(styles);
 function Album() {
   const searchParam = useSearchParams();
   const viewRef = useRef();
-  const isInView = useInView(viewRef, { once: false });
+  const isInView = useInView(viewRef, { once: true });
   const name = searchParam.get("name") || "You";
   const [isShow, setIsShow] = useState(false);
   const [index, setIndex] = useState(0);
@@ -43,8 +43,10 @@ function Album() {
           className={cx("front-img")}
           style={{
             opacity: isInView ? 1 : 0,
-            top: isInView ? "50%" : "100%",
-            transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1)",
+            transform: isInView
+              ? "translateX(-50%) translateY(0)"
+              : "translateX(-50%) translateY(30px)",
+            transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
           }}
         >
           <img className={cx("hfimg")} src={albumPage.mainImage} alt="Album" fetchPriority="high" />
